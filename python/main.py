@@ -48,7 +48,7 @@ def main():
   idx = 0
   while (gap<10):
       address = deriveWPKH(idx)
-      print(address)
+      # print(address)
       idx += 1
       scantxoutset = rpc_connection.scantxoutset("start",[f"addr({address})"])
       # print(scantxoutset)
@@ -58,7 +58,9 @@ def main():
           gap = 0
       balance += float(scantxoutset["total_amount"])
   print(balance)
-
+f = open("./out.txt","w")
+f.write(f"{balance}")
+f.close()
 
 if __name__ == "__main__":
     main()
