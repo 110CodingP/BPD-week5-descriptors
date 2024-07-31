@@ -1,3 +1,5 @@
+npm install 
+
 # Copy data directory to a temporary directory
 cp -r ./data ./tmp-data
 
