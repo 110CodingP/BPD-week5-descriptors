@@ -58,9 +58,9 @@ def main():
           gap = 0
       balance += float(scantxoutset["total_amount"])
   print(balance)
-f = open("./out.txt","w")
-f.write(f"{balance}")
-f.close()
+  f = open("./out.txt","w")
+  f.write(f"{format(balance,'.8f')}")
+  f.close()
 
 if __name__ == "__main__":
     main()
