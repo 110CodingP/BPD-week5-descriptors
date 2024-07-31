@@ -21,3 +21,5 @@ chmod +x ./run.sh
 /bin/bash run.sh
 npm run test
 docker compose down -v
+
+sudo rm -rf ./tmp-data

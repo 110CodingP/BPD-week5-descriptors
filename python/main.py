@@ -49,6 +49,7 @@ def main():
   idx = 0
   while (gap<10):
       address = deriveWPKH(idx)
+      print(address)
       # print(address)
       idx += 1
       scantxoutset = rpc_connection.scantxoutset("start",[f"addr({address})"])
