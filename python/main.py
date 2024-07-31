@@ -4,6 +4,7 @@ import hashlib
 import secp256k1
 import base58
 import b32_ref as b32
+from ripemd.ripemd160 import ripemd160
 
 def main():
   rpc_connection = AuthServiceProxy("http://alice:password@127.0.0.1:18443")
@@ -13,7 +14,7 @@ def main():
 
   def hash160(data):
      preimage = hashlib.sha256(data).digest()
-     return hashlib.new("ripemd160",preimage).digest()
+     return ripemd160(preimage)
   
   def spk_to_bech32(data):
     network = "bcrt"

@@ -1,10 +1,5 @@
 npm install 
 
-port activate openssl @1.1_3
-port uninstall python39
-port clean python39
-port install -s -f python39
-
 # Copy data directory to a temporary directory
 cp -r ./data ./tmp-data
 
